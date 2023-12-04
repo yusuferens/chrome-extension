@@ -4,7 +4,6 @@ const inputEL = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
-localStorage.clear() 
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
 
 if(leadsFromLocalStorage ) {
