@@ -3,11 +3,22 @@ const inputBtn = document.getElementById("input-btn")
 const inputEL = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
 
+localStorage.clear() 
+let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
+
+if(leadsFromLocalStorage ) {
+    myLeads = leadsFromLocalStorage;
+    renderLeads()
+    
+}
+
 
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEL.value)
     renderLeads()
+    localStorage.setItem("myLeads" , JSON.stringify(myLeads))
+
     inputEL.value = "";
 
 })
