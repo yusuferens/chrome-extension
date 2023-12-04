@@ -2,6 +2,7 @@ let myLeads = []
 const inputBtn = document.getElementById("input-btn")
 const inputEL = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
+const deleteBtn = document.getElementById("delete-btn")
 
 localStorage.clear() 
 let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
@@ -9,7 +10,7 @@ let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
 if(leadsFromLocalStorage ) {
     myLeads = leadsFromLocalStorage;
     renderLeads()
-    
+
 }
 
 
