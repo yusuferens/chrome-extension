@@ -1,9 +1,13 @@
-let inputBtn = document.getElementById("input-btn")
-const myLeads = []
+let myLeads = []
+const inputBtn = document.getElementById("input-btn")
 const inputEL = document.getElementById("input-el")
 
 
+
 inputBtn.addEventListener("click", function() {
-    console.log("button clickedddd")
+    myLeads.push(inputEL.value)
+    console.log(myLeads)
+
 })
+
 
