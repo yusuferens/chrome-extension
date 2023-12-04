@@ -3,6 +3,7 @@ const inputBtn = document.getElementById("input-btn")
 const inputEL = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
+const saveTabBtn = document.getElementById("savetab-btn")
 
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
 
@@ -10,6 +11,7 @@ if(leadsFromLocalStorage ) {
     myLeads = leadsFromLocalStorage;
     render(myLeads)
 
+    
 }
 function render(leads) {
     let listItems = "";
