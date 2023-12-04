@@ -5,7 +5,7 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
 localStorage.clear() 
-let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"))
 
 if(leadsFromLocalStorage ) {
     myLeads = leadsFromLocalStorage;
@@ -13,6 +13,12 @@ if(leadsFromLocalStorage ) {
 
 }
 
+deleteBtn.addEventListener("dblclick",function(){
+   localStorage.clear()
+   myLeads = []
+   renderLeads()
+   
+})
 
 
 inputBtn.addEventListener("click", function() {
